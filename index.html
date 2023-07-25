@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="text/javascript" src="./script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <figure class="header__logo">
+          <img class="header__logo--img" src="./assets/Booster Club.png" alt="Red Raiders Booster Club Logo" />
+        </figure>
+      </nav>
+      <section id="landing">
+        <div class="container">
+          <div class="row">
+            <form>
+              <h2 class="form__title">Booster Registration</h2>
+              <div class="membership__data">
+                <div class="form-row">
+                  <div class="col full-size">
+                    <label for="eaddress">Email Address</label>
+                    <input required type="email" id="eaddress" name="eaddress" />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col half-size">
+                    <label for="fname">First Name</label>
+                    <input required type="text" id="fname" name="fname" />
+                  </div>
+
+                  <div class="col half-size margin-left">
+                    <label for="lname">Last Name</label>
+                    <input required type="text" id="lname" name="lname" />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col half-size">
+                    <label for="address">Address</label>
+                    <input required type="text" id="address" name="address" />
+                  </div>
+
+                  <div class="col half-size margin-left">
+                    <label for="pnumber">Phone Number</label>
+                    <input required type="tel" id="pnumber" name="pnumber" />
+                  </div>
+                </div>
+              </div>
+              <div class="membership__select">
+                <h2 class="membership__title">Booster Level</h2>
+                <select name="membership__broad" class="membership__broad" id="membership__broad" onchange="showTier()">
+                  <option selected disabled value="default">Select</option>
+                  <option value="tier-1">Tier 1</option>
+                  <option value="tier-2">Tier 2</option>
+                  <option value="tier-3">Tier 3</option>
+                </select>
+                <div class="membership membership__tier-1" id="membership">
+                  <input class="membership__option membership__option--tier-1 platinum-radio" type="radio" id="platinum" name="tier-1-membership" value="Platinum" onchange="setTierHTML(this.value)" />
+                  <label for="platinum">Platinum $10,000</label>
+
+                  <input class="membership__option membership__option--tier-1 diamond-radio" type="radio" id="diamond" name="tier-1-membership" value="Diamond" onchange="setTierHTML(this.value)" />
+                  <label for="diamond">Diamond $5,000</label>
+
+                  <input class="membership__option membership__option--tier-1 gold-radio" type="radio" id="gold" name="tier-1-membership" value="Gold" onchange="setTierHTML(this.value)" />
+                  <label for="gold">Gold $2,500</label>
+                </div>
+
+                <div class="membership membership__tier-2" id="membership">
+                  <input class="membership__option membership__option--tier-2 silver-radio" type="radio" id="silver" name="tier-2-membership" value="Silver" onchange="setTierHTML(this.value)" />
+                  <label for="silver">Silver $1,000</label>
+
+                  <input class="membership__option membership__option--tier-2" type="radio" id="raider" name="tier-2-membership" value="Raider" onchange="setTierHTML(this.value)" />
+                  <label for="raider">Raider $500</label>
+
+                  <input class="membership__option membership__option--tier-2 red-radio" type="radio" id="red" name="tier-2-membership" value="Red" onchange="setTierHTML(this.value)" />
+                  <label for="red">Red $250</label>
+                </div>
+
+                <div class="membership membership__tier-3" id="membership">
+                  <input class="membership__option membership__option--tier-3 black-radio" type="radio" id="black" name="tier-3-membership" value="Black" onchange="setTierHTML(this.value)" />
+                  <label for="black">Black $100</label>
+
+                  <input
+                    class="membership__option membership__option--tier-3 individual-radio"
+                    type="radio"
+                    id="individual"
+                    name="tier-3-membership"
+                    value="Individual"
+                    onchange="setTierHTML(this.value)"
+                  />
+                  <label for="individual">Individual $50</label>
+
+                  <input class="membership__option membership__option--tier-3 student-radio" type="radio" id="student" name="tier-3-membership" value="Student" onchange="setTierHTML(this.value)" />
+                  <label for="student">Student $25</label>
+                </div>
+              </div>
+              <div class="benefits">
+                <h2 class="benefits__title">Your Benefits</h2>
+                <ul class="benefits__list">
+                  <li class="benefit benefit__sponsorship">
+                    <h3 class="benefit__title">Sponsorship</h3>
+                    <p class="benefit__para benefit__sponsorship--para">Game sponsorship benefits at the selected Level</p>
+                  </li>
+                  <li class="benefit benefit__marketing">
+                    <h3 class="benefit__title">Marketing</h3>
+                    <p class="benefit__para benefit__marketing--para">Marketing benefits at the selected Level</p>
+                  </li>
+                  <li class="benefit benefit__swag">
+                    <h3 class="benefit__title">Swag</h3>
+                    <p class="benefit__para benefit__swag--para">Raider swag benefits at the selected Level</p>
+                  </li>
+                  <li class="benefit benefit__perks">
+                    <h3 class="benefit__title">Perks</h3>
+                    <p class="benefit__para benefit__perks--para">Perks at the selected Level</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="benefits__empty-state">
+                <h2 class="benefits__title">Your Benefits</h2>
+                <div class="benefits__box">
+                  <h4 class="benefits__box--alert">Select A Booster Level To See Your Benefits!</h4>
+                </div>
+              </div>
+              <div class="form-row checkbox-row">
+                <div class="checkbox--container">
+                  <input type="checkbox" id="volunteer" name="volunteer" value="Volunteer" />
+                  <label class="small-label" for="volunteer">I Want to Volunteer</label>
+                </div>
+
+                <div class="checkbox--container">
+                  <input type="checkbox" id="alumni" name="alumni" value="Alumni" />
+                  <label class="small-label" for="alumni">I'm a Sidney Alumni</label>
+                </div>
+              </div>
+              <button class="submit__button" type="submit">Become A Booster!</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
+  </body>
+</html>
