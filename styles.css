@@ -710,11 +710,10 @@ form {
 
 @media(max-width: 415px){
   .checkbox-row{
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .checkbox--container:last-child{
-    margin-left: 0;
-    margin-top: 16px;
+  .small-label{
+    font-size: 12px;
   }
 }
