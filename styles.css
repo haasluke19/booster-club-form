@@ -45,6 +45,7 @@ h5 {
   font-size: 18px;
   font-family: "Hind Guntur", sans-serif;
   line-height: 1.4;
+  overflow-y: hidden;
 }
 
 p {
