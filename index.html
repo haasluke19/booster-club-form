@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Booster Registration</title>
     <link rel="stylesheet" href="./styles.css" />
     <script type="text/javascript" src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/e274833811.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="">
   </head>
   <body class="">
     <header>
@@ -32,7 +33,7 @@
               <i class="fa-solid fa-spinner"></i>
               <h2 class="form__loading--title">Submitting...</h2>
             </div>
-            <form method="POST" action="https://script.google.com/macros/s/AKfycbyc7qu_fxJs-eOu4e-jK8AuGksOuYkLh3ddh_RBMf2CaAUsAKXd8H-T_F2En0GyBbIW/exec" onsubmit="handleSubmit(event)">
+            <form method="POST" action="https://script.google.com/macros/s/AKfycbzwMPhY231x-ew7Puygve8Pb36EOnKQ2rjR0Q5o_iYcD9597rMjDwz0N3xYIdE2Hp1e/exec" onsubmit="handleSubmit(event)">
               <h2 class="form__title">Booster Registration</h2>
               <div class="membership__data">
                 <div class="form-row">
@@ -67,13 +68,15 @@
                 </div>
               </div>
               <div class="membership__select">
-                <h2 class="membership__title">Booster Level</h2>
-                <select name="membership__broad" class="membership__broad" id="membership__broad" onchange="showTier()">
-                  <option selected disabled value="default">Select</option>
-                  <option value="tier-1">Tier 1</option>
-                  <option value="tier-2">Tier 2</option>
-                  <option value="tier-3">Tier 3</option>
-                </select>
+                <div class="membership__select--wrapper">
+                  <h3 class="membership__title">Booster Level</h3>
+                  <select name="membership__broad" class="membership__broad" id="membership__broad" onchange="showTier()">
+                    <option selected disabled value="default">Select</option>
+                    <option value="tier-1">Tier 1</option>
+                    <option value="tier-2">Tier 2</option>
+                    <option value="tier-3">Tier 3</option>
+                  </select>
+                </div>
                 <div class="membership membership__tier-1" id="membership">
                   <input class="membership__option membership__option--tier-1 platinum-radio" type="radio" id="platinum" name="tier-1-membership" value="Platinum" onchange="setTierHTML(this.value)" />
                   <label for="platinum">Platinum $10,000</label>

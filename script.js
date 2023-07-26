@@ -131,7 +131,7 @@ function setTierHTML(value){
   else{
     documentBody.classList.remove('hide-sponsorship')
   }
-  selectedTierEl.value = value;
+  selectedTierEl.value = `${tier.tier} (${tier.cost})`;
   benefitsTitleEl.innerHTML = tier.tier + ' Benefits'
   sponsorshipEl.innerHTML = tier.sponsorship
   marketingEl.innerHTML = tier.marketing
