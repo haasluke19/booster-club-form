@@ -628,6 +628,8 @@ form {
     border-radius: 20px;
   }
 
+
+
   .benefits__list{
     flex-direction: row;
     flex-wrap: wrap;
@@ -670,6 +672,23 @@ form {
 
   .checkbox-row{
     flex-direction: row;
+  }
+
+  .mobile-row{
+    flex-direction: row;
+  }
+
+  .mobile-half-size{
+    width: 50%;
+  }
+
+  .mobile-margin-left{
+    margin-top: 0;
+    margin-left: 8px;
+  }
+
+  .membership__data{
+    padding: 0 16px;
   }
 
 }
