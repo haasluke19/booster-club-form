@@ -87,6 +87,7 @@ label {
   font-weight: 700;
   color: hsl(0, 0%, 60%);
   min-height: 25px;
+  overflow-y: hidden;
 }
 
 .small-label {
@@ -523,6 +524,7 @@ form {
   margin-right: 1%;
   padding: 16px 16px 40px 16px;
   box-shadow: 0 2px 0 0 hsl(0, 0%, 28%), inset 0 2px 2px 1px hsl(0, 0%, 10%);
+  overflow-y: hidden;
 }
 
 .benefit__title {
@@ -531,6 +533,7 @@ form {
 
 .benefit__para {
   text-align: left;
+  overflow-y: hidden;
 }
 
 .benefits__box {
@@ -632,13 +635,17 @@ form {
   }
 
   .benefit{
-    width: 48%;
+    width: 49%;
     margin-top: 24px;
     overflow-y: hidden;
   }
 
   .benefits__title{
     margin-bottom: 0;
+  }
+
+  .hide-sponsorship .benefit {
+    width: 49%;
   }
 
 }
@@ -663,10 +670,16 @@ form {
   .checkbox-row{
     flex-direction: row;
   }
+
 }
 
 @media(max-width:460px){
   .benefit{
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  .hide-sponsorship .benefit {
     width: 100%;
     overflow-y: hidden;
   }
