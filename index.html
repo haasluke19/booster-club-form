@@ -6,8 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css" />
     <script type="text/javascript" src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/e274833811.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="">
     <header>
       <nav>
         <figure class="header__logo">
@@ -17,7 +18,21 @@
       <section id="landing">
         <div class="container">
           <div class="row">
-            <form>
+            <div class="form__error">
+              <h2>Sorry...</h2>
+              <h3>We Couldn't Process Your Request<br>Try Again Later Or Contact Us</h3>
+            </div>
+            <div class="form__success">
+              <h2>You're Almost A Booster!</h2>
+              <h3 id="payment-price">We just need your payment...</h3>
+              <img class="venmo__img" src="./assets/Venmo.png" alt="">
+              <h5>Scan the QR code for Venmo<br>Or<br>Mail Cash/Check<br>To: PO BOX 832, Sidney, NE 69162</h5>
+            </div>
+            <div class="form__loading">
+              <i class="fa-solid fa-spinner"></i>
+              <h2 class="form__loading--title">Submitting...</h2>
+            </div>
+            <form method="POST" action="https://script.google.com/macros/s/AKfycbxZXMo7cfpzAWdnRNnr2V5arSGLBP_k1IKQ6_eAyCV0z1VGE4fnv-UUpcpq7DSH93lM/exec" onsubmit="handleSubmit(event)">
               <h2 class="form__title">Booster Registration</h2>
               <div class="membership__data">
                 <div class="form-row">
@@ -137,11 +152,13 @@
                   <label class="small-label" for="alumni">I'm a Sidney Alumni</label>
                 </div>
               </div>
+              <input type="hidden" id="selected_tier" name="selected_tier" value="" />
               <button class="submit__button" type="submit">Become A Booster!</button>
             </form>
           </div>
         </div>
       </section>
+      <div id="submissionStatus"></div>
     </header>
   </body>
 </html>
