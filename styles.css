@@ -39,6 +39,13 @@ h4{
   font-size: 24px;
 }
 
+h5{
+  margin-top: 8px;
+  font-size: 18px;
+  font-family: 'Hind Guntur', sans-serif;
+  line-height: 1.4;
+}
+
 p{
   font-family: 'Hind Guntur', sans-serif;
   font-size: 16px;
@@ -241,6 +248,15 @@ nav {
 
 /* LANDING */
 
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -249,6 +265,88 @@ form {
   border-radius: 40px;
   box-shadow: 0 2px 0 0 hsl(0, 0%, 28%), inset 0 2px 2px 1px hsl(0, 0%, 18%);
   margin-bottom: 400px;
+  position: relative;
+}
+
+.loading form{
+  display: none;
+}
+
+.success form{
+  display: none;
+}
+
+.form__error{
+  display: none;
+}
+
+.error .form__error{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.loading .form__loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error .form__loading{
+  visibility: hidden;
+  display: none;
+}
+
+.success .form__loading{
+  align-items: center;
+  visibility: hidden;
+  display: none;
+}
+
+.success .form__success{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form__success{
+  display: none;
+}
+
+.fa-solid{
+  font-size: 40px;
+  margin-right: 8px;
+}
+
+.fa-spinner{
+  animation-name: spin;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+
+.loading .container{
+  height: calc(100vh - 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success .container{
+  display: flex;
+  align-items: start;
+}
+
+.venmo__img{
+  height: 200px;
+  border-radius: 20px;
+  margin-top: 16px;
+}
+
+.form__loading{
+  display: none;
 }
 
 .form__title{
