@@ -654,8 +654,11 @@ form {
 }
 
 @media(max-width: 560px){
+  .row{
+    padding: 0;
+  }
   form{
-    padding: 40px 8px;
+    padding: 40px 16px;
   }
   .form-row{
     flex-direction: column;
