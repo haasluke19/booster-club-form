@@ -145,7 +145,7 @@ function handleSubmit(event) {
 
   documentBody.classList.add('loading');
 
-  fetch('https://script.google.com/macros/s/AKfycbxiWIvSBBih_0zEED0lTXcRFHtAcKYT6vceTw1S9A98xmDmB_r0VbfRmPTA9NmMvNgi/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbw66HCUHSZgGJ8cI_a3mCURrN8-tpnVIpfY80CezrdwyQnjsH4DFp2ZNMKlQISbomen/exec', {
     method: 'POST',
     body: new FormData(event.target),
   })
